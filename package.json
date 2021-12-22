@@ -1,0 +1,9 @@
+{
+  "name":         "menuapp",
+  "description":  "Menu Application Middle Tier",
+  "version":      "1.0.0",
+  "dependencies": {
+    "pg": "0.8.6",
+    "express": "3.0.0rc5"
+  }
+}

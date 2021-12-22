@@ -1,0 +1,31 @@
+01. perm_sync method is used to synchronize all the access control parameters
+for an organization.
+
+02. When a line is written in the use_doc_material table against a document, it
+will automatically populate the use_doc_line table. org_id, doc_code, doc_no,
+pt_id, ms_id, qty_out - the required fields to be filled in the
+use_doc_material table.
+
+03. pccc_id, project_task - should choose a default one for each item. -- NOTE: How?
+
+04. itfb2_use_doc_material - it has a quick fix which should be removed (by SS).
+
+05. is_process_cogs - table default should be zero.
+
+06. document configuration - add unit_price as an editable attribute -- Done
+
+07. Image files should be uploaded to the app_blob table.
+
+08. Need to create material_files table. This file should include material_id,
+an auto-generated id, app_blob id and a texual description.
+
+09. Restaurant Tables should be recorded as project_tasks.
+
+10. use_doc_line is automatically populated from use_doc_material through a
+function call - account.udl_update_from_udm. This function does what is
+required to update
+
+11. You need to specify unit_price and qty_out_sold if you want use_doc_line to
+be automatically populated from use_doc_material's line insertion.
+
+12. Set is_process_cogs to zero for the document type.
